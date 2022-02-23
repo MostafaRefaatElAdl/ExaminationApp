@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExamPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamPage.Designer.cs">
+      <DependentUpon>ExamPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="WelcomeStPage.Designer.cs">
       <DependentUpon>WelcomeStPage.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ExamPage.resx">
+      <DependentUpon>ExamPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
