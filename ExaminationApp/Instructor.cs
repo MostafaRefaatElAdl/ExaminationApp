@@ -23,6 +23,7 @@ namespace ExaminationApp
         public int MNGR_id { get; set; }
         public int Dept_id { get; set; }
 
+        public string Dept_name { get; set; }
 
     }
 }

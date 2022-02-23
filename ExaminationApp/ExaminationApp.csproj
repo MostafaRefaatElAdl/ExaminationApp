@@ -50,30 +50,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DashBord.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DashBord.Designer.cs">
-      <DependentUpon>DashBord.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Instructor.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DashBord.resx">
-      <DependentUpon>DashBord.cs</DependentUpon>
+    <Compile Include="StudentGrades.cs" />
+    <Compile Include="WelcomeInsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeInsPage.Designer.cs">
+      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeStPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeStPage.Designer.cs">
+      <DependentUpon>WelcomeStPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="WelcomeInsPage.resx">
+      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeStPage.resx">
+      <DependentUpon>WelcomeStPage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +107,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\examIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkImage.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iti-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\A_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\evalIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
