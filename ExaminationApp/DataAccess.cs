@@ -57,23 +57,6 @@ namespace ExaminationApp
             }
         }
 
-        // get Exam Dictionary
-        //public List<Questions> GetExamQuestions()
-        //{
-        //    using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
-        //    {
-        //        return connection.Query<Questions>("dbo.generateExamQuetions @courseId", new { courseId = 1 }).ToList();
-        //    }
-        //}
-
-        //public List<Q_Choices> GetExamQuestionsChoices()
-        //{
-        //    using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
-        //    {
-        //        var outPut = connection.Query<Q_Choices>("dbo.generateExamQuetions @courseId", new { courseId = 1 }).ToList();
-        //        return outPut;
-        //    }
-        //}
 
         public List<Exam> GetExamQuestionsAndChoices()
         {

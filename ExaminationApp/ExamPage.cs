@@ -15,7 +15,7 @@ namespace ExaminationApp
     {
         // Global Atrributes
         int QuestionNumber = 1;
-        int totalQuextions = 5;
+        int totalQuestions = 10;
         public ExamPage()
         {
             InitializeComponent();
@@ -133,6 +133,27 @@ namespace ExaminationApp
                     lbQ.Text = exam.Keys.ElementAt(4);
                     DisplayChoices(exam.Values.ElementAt(4));
                     break;
+                case 6:
+                    lbQ.Text = exam.Keys.ElementAt(5);
+                    DisplayChoices(exam.Values.ElementAt(5));
+                    break;
+                case 7:
+                    lbQ.Text = exam.Keys.ElementAt(6);
+                    DisplayChoices(exam.Values.ElementAt(6));
+                    break;
+                case 8:
+                    lbQ.Text = exam.Keys.ElementAt(7);
+                    DisplayChoices(exam.Values.ElementAt(7));
+                    break;
+
+                case 9:
+                    lbQ.Text = exam.Keys.ElementAt(8);
+                    DisplayChoices(exam.Values.ElementAt(8));
+                    break;
+                case 10:
+                    lbQ.Text = exam.Keys.ElementAt(9);
+                    DisplayChoices(exam.Values.ElementAt(9));
+                    break;
             }
         }
 
@@ -148,7 +169,7 @@ namespace ExaminationApp
 
         private void next_Click(object sender, EventArgs e)
         {
-            if (QuestionNumber <= totalQuextions)
+            if (QuestionNumber < totalQuestions)
             {
                 QuestionNumber++;
                 AskQuetions(QuestionNumber);
