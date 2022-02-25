@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace ExaminationApp
 {
-    internal class StudentGrades
-    {
+      class StudentGrades
+      {
         public string Student_Name { get; set; }
-        public string Course_Name { get; set; }
-        public int Student_grade { get; set; }
+        public string Crs_Name { get; set; }
+        public int Crs_grade { get; set; }
 
         public string Student_Status {
             get 
             { 
-                return $"{Course_Name} \t {Student_grade}%"; 
+                return $"{Crs_Name} \t {Crs_grade}%"; 
             } 
         }
            

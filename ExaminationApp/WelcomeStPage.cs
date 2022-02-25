@@ -37,7 +37,7 @@ namespace ExaminationApp
         private void button2_Click(object sender, EventArgs e)
         {
             listBox.Show();
-            studentGrades = da.getStudentGrades();
+          //  studentGrades = da.getStudentGrades();
             
             listBox.DataSource=studentGrades;
             listBox.DisplayMember = "Student_Status";
@@ -46,7 +46,8 @@ namespace ExaminationApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox.Hide();
+        
+            //listBox.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -54,6 +55,16 @@ namespace ExaminationApp
             LoginPage loginPage = new LoginPage();
             loginPage.Show();
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

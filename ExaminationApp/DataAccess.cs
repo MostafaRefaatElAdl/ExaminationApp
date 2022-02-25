@@ -48,7 +48,18 @@ namespace ExaminationApp
         }
 
         // get Courses Grade
-        public List<StudentGrades> getStudentGrades()
+        public List<StudentGrades> getStudentGrades(int id)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                
+                return connection.Query<StudentGrades>("dbo.getStudentGrades @stdId", new { stdId = id }).ToList();
+
+            }
+        }
+        // get Student Courses
+
+        public List<StudentGrades> getStudentCourses()
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
             {

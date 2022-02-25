@@ -40,7 +40,7 @@ namespace ExaminationApp
                         {
                             userFound = true;
                             DataAccess.UserIdToken = student.St_id;
-                            WelcomeStPage welcomePage = new WelcomeStPage();
+                           StudentWelcomPage welcomePage = new StudentWelcomPage();
                             welcomePage.Show();
                             this.Hide();
                             //this.Close();
@@ -75,7 +75,9 @@ namespace ExaminationApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please Inputs valid data First", "Error");
+               
+               // MessageBox.Show("Please Inputs valid data First", "Error");
+                MessageBox.Show(ex.Message);
 
             }
 

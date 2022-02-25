@@ -83,6 +83,7 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Student Name";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // button2
             // 
