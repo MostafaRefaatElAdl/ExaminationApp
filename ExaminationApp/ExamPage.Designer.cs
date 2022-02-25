@@ -56,6 +56,7 @@
             this.Choice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Choice1.UseVisualStyleBackColor = true;
             this.Choice1.Click += new System.EventHandler(this.CheckAnswerEvent);
+            this.Choice1.Paint += new System.Windows.Forms.PaintEventHandler(this.Choice1_Paint);
             // 
             // Choice2
             // 

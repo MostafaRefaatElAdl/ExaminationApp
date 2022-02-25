@@ -139,7 +139,7 @@ namespace ExaminationApp
         private void CheckAnswerEvent(object sender, EventArgs e)
         {
             RadioButton myChoice = (RadioButton) sender;
-            // MessageBox.Show(myChoice.Text);
+            this.Text = myChoice.Text;
         }
 
 
@@ -163,6 +163,14 @@ namespace ExaminationApp
             }
            
 
+        }
+
+        private void Choice1_Paint(object sender, PaintEventArgs e)
+        {
+            Choice1.Checked = false;
+            Choice2.Checked = false;
+            Choice3.Checked = false;
+            Choice4.Checked = false;
         }
     }
 }
