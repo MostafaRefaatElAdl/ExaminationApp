@@ -67,5 +67,15 @@ namespace ExaminationApp
 
             }
         }
+
+
+        public List<Exam> GetExamQuestionsAndChoices()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                var QuesAndChoices = connection.Query<Exam>("dbo.generateExamQuetions @courseId", new { courseId = 1 }).ToList();
+                return QuesAndChoices;
+            }
+        }
     }
 }
