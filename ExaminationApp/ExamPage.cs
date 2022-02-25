@@ -25,52 +25,52 @@ namespace ExaminationApp
         {
             ShowQuetions();
             AskQuetions(QuestionNumber);
-
-             
         }
         // ======================================global list to carry Answers===========================
-        List<string[]> answers = new List<string[]>();
+        //List<string[]> answers = new List<string[]>();
         Dictionary<string, string[]> exam = new Dictionary<string, string[]>();
-        List<String> Questions = new List<string>();
+        //List<String> Questions = new List<string>();
 
         //========================================function to split choices =============================
-        public string[] SplitChoices(string choices)
-        {
-            string[] answer = choices.Split(',');
-            return answer;
+        //public string[] SplitChoices(string choices)
+        //{
+        //    string[] answer = choices.Split(',');
+        //    return answer;
 
-        }
+        //}
         public void ShowQuetions()
         {
-            //==============================perpare list of Quetions=================================
-            Questions.Add("Q1:Which of the following is the root of the hierarchy of all .NET types ?");
-            Questions.Add("Q2:Which of the following is the root of the hierarchy of all .NET types ?");
-            Questions.Add("Q3:Which of the following is the root of the hierarchy of all .NET types ?");
-            Questions.Add("Q4:Which of the following is the root of the hierarchy of all .NET types ?");
-            Questions.Add("Q5:Which of the following is the root of the hierarchy of all .NET types ?");
+            DataAccess da = new DataAccess();
+            //Getting Quetions and it's choices from database
+            List<Exam> listExams = da.GetExamQuestionsAndChoices();
+            ////==============================perpare list of Quetions=================================
+            //Questions.Add("Q1:Which of the following is the root of the hierarchy of all .NET types ?");
+            //Questions.Add("Q2:Which of the following is the root of the hierarchy of all .NET types ?");
+            //Questions.Add("Q3:Which of the following is the root of the hierarchy of all .NET types ?");
+            //Questions.Add("Q4:Which of the following is the root of the hierarchy of all .NET types ?");
+            //Questions.Add("Q5:Which of the following is the root of the hierarchy of all .NET types ?");
             //==============================perpare list of Answers=================================
 
 
-            string Answer1 = "False1,True,";
-            string Answer2 = "Depends on DBA2,Depends on number of Columns,Only 1,Only 2,";
-            string Answer3 = "False3,True,";
-            string Answer4 = "Depends on DBA4,Depends on number of Columns,Only 1,Only 2,";
-            string Answer5 = "False5,True,";
+            //string Answer1 = "False1,True,";
+            //string Answer2 = "Depends on DBA2,Depends on number of Columns,Only 1,Only 2,";
+            //string Answer3 = "False3,True,";
+            //string Answer4 = "Depends on DBA4,Depends on number of Columns,Only 1,Only 2,";
+            //string Answer5 = "False5,True,";
 
-            // i will call function 
-            answers.Add(SplitChoices(Answer1));
-            answers.Add(SplitChoices(Answer2));
-            answers.Add(SplitChoices(Answer3));
-            answers.Add(SplitChoices(Answer4));
-            answers.Add(SplitChoices(Answer5));
+            //// i will call function 
+            //answers.Add(SplitChoices(Answer1));
+            //answers.Add(SplitChoices(Answer2));
+            //answers.Add(SplitChoices(Answer3));
+            //answers.Add(SplitChoices(Answer4));
+            //answers.Add(SplitChoices(Answer5));
 
             //=========================================  define dictionary which connect between Qustions & choices==============================
-            //for (int i = 0; i < 5; i++)
-            //{
-            //    exam.Add(questionsList[i], answers[i]);
+            for (int i = 0; i < listExams.Count; i++)
+            {
+                exam.Add(listExams[i].Q_desc, listExams[i].SplitChoices());
+            }
 
-            //}
-            exam.Add(newExam[0].Q_desc, answers[0]);
 
         }
        
