@@ -68,6 +68,17 @@ namespace ExaminationApp
             }
         }
 
+        // get Student Courses
+
+        public List<Courses> GetCourses()
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                return connection.Query<Courses>("dbo.selectAllCourses").ToList();
+
+            }
+        }
+
 
         public List<Exam> GetExamQuestionsAndChoices()
         {

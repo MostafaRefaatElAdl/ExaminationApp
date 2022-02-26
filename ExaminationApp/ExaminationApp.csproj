@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Courses.cs" />
     <Compile Include="ExamPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,16 +78,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentCourses.cs" />
     <Compile Include="StudentGrades.cs" />
-
     <Compile Include="StudentWelcomPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentWelcomPage.Designer.cs">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Exam.cs" />
-
     <Compile Include="WelcomeInsPage.cs">
       <SubType>Form</SubType>
     </Compile>
