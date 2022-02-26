@@ -16,8 +16,10 @@ namespace ExaminationApp
         // Global Atrributes
         int QuestionNumber = 1;
         int totalQuestions = 10;
+       
         public ExamPage()
         {
+           
             InitializeComponent();
         }
 

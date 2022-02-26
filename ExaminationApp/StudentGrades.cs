@@ -9,6 +9,7 @@ namespace ExaminationApp
       class StudentGrades
       {
         public string Student_Name { get; set; }
+        public int Crs_id { get; set; }
         public string Crs_Name { get; set; }
         public int Crs_grade { get; set; }
 

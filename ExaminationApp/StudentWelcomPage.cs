@@ -87,7 +87,7 @@ namespace ExaminationApp
                     Console.WriteLine(studentGrades[i].Crs_grade);
                     Button b = new Button();
                     b.Name = "open_Exam";                  
-                    b.Text = studentGrades[i].Crs_Name;
+                    b.Text = studentGrades[i].Crs_Name+"-"+ studentGrades[i].Crs_id;
                     b.BackColor = Color.LightGray;
                     course_Panel.Controls.Add(b);
                     b.Size = new System.Drawing.Size(216, 32);
@@ -101,6 +101,8 @@ namespace ExaminationApp
 
         private void open_Exam_Click(object sender, EventArgs e)
         {
+            //Button s = (Button)sender;
+            //int id = int.Parse( s.Text.Substring(s.Text.IndexOf('-')+1));
             new ExamPage().Visible = true;
                
            
