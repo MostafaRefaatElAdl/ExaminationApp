@@ -18,15 +18,28 @@ namespace ExaminationApp
         int totalQuestions = 10;
        
         public ExamPage()
+        List<Exam> listExams;
+        int c_id; 
+        public ExamPage(int id)
         {
-           
+            c_id = id;     
             InitializeComponent();
+
         }
 
         private void ExamPage_Load(object sender, EventArgs e)
         {
             ShowQuetions();
-            AskQuetions(QuestionNumber);
+            if (listExams.Count == 0)
+            {
+                MessageBox.Show("not Available");
+                this.Close();
+            }
+            else 
+            { 
+                AskQuetions(QuestionNumber);
+            }
+
         }
         // ======================================global list to carry Answers===========================
         //List<string[]> answers = new List<string[]>();
@@ -44,7 +57,7 @@ namespace ExaminationApp
         {
             DataAccess da = new DataAccess();
             //Getting Quetions and it's choices from database
-            List<Exam> listExams = da.GetExamQuestionsAndChoices();
+           listExams = da.GetExamQuestionsAndChoices(c_id);
             ////==============================perpare list of Quetions=================================
             //Questions.Add("Q1:Which of the following is the root of the hierarchy of all .NET types ?");
             //Questions.Add("Q2:Which of the following is the root of the hierarchy of all .NET types ?");
@@ -196,5 +209,6 @@ namespace ExaminationApp
             Choice3.Checked = false;
             Choice4.Checked = false;
         }
+
     }
 }
