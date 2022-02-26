@@ -25,7 +25,7 @@ namespace ExaminationApp
         {
             student = da.getStudent();
             int id = student.St_id;
-            header_stname_btn.Text = $"Welcom { student.StF_Name } {student.StL_Name}";
+            header_stname_btn.Text = $"Welcome { student.StF_Name } {student.StL_Name}";
             studentGrades = da.getStudentGrades(id);
             addCoursesToPanel();
         }
@@ -86,8 +86,9 @@ namespace ExaminationApp
                 {
                     Console.WriteLine(studentGrades[i].Crs_grade);
                     Button b = new Button();
-                    b.Name = "open_Exam";                  
-                    b.Text = studentGrades[i].Crs_Name+"-"+ studentGrades[i].Crs_id;
+                    b.Name = "open_Exam";             
+                    //we can't show courses ids' to user
+                    b.Text = studentGrades[i].Crs_Name/*+"-"+ studentGrades[i].Crs_id*/;
                     b.BackColor = Color.LightGray;
                     course_Panel.Controls.Add(b);
                     b.Size = new System.Drawing.Size(216, 32);

@@ -80,11 +80,11 @@ namespace ExaminationApp
         }
 
 
-        public List<Exam> GetExamQuestionsAndChoices()
+        public List<Exam> GetExamQuestionsAndChoices(int crs_id)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
             {
-                var QuesAndChoices = connection.Query<Exam>("dbo.generateExamQuetions @courseId", new { courseId = 1 }).ToList();
+                var QuesAndChoices = connection.Query<Exam>("dbo.GenerateExam @courseId", new { courseId = crs_id }).ToList();
                 return QuesAndChoices;
             }
         }
