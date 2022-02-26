@@ -156,7 +156,7 @@
             this.crsNameLabel.Size = new System.Drawing.Size(95, 59);
             this.crsNameLabel.TabIndex = 0;
             this.crsNameLabel.Text = "lab1                      ";
-            this.crsNameLabel.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // gradeLabel
             // 

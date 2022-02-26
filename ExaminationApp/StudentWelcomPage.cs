@@ -27,7 +27,7 @@ namespace ExaminationApp
             int id = student.St_id;
             header_stname_btn.Text = $"Welcom { student.StF_Name } {student.StL_Name}";
             studentGrades = da.getStudentGrades(id);
-            addEndedCoursesToPanel();
+            addCoursesToPanel();
         }
 
         int flag = 0;
@@ -65,7 +65,7 @@ namespace ExaminationApp
         {
 
         }
-        private void addEndedCoursesToPanel() {
+        private void addCoursesToPanel() {
             for (int i = 0; i < studentGrades.Count; i++)
             {
                 //1524587
@@ -101,7 +101,8 @@ namespace ExaminationApp
 
         private void open_Exam_Click(object sender, EventArgs e)
         {
-
+            new ExamPage().Visible = true;
+               
            
         }
         private void showGrade_Click(object sender, EventArgs e)
@@ -119,9 +120,6 @@ namespace ExaminationApp
                 }
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
