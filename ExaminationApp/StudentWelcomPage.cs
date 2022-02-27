@@ -79,16 +79,14 @@ namespace ExaminationApp
                     b.Size = new System.Drawing.Size(216, 32);
                     b.Click += new EventHandler(showGrade_Click);
 
-
-
                 }
                 else
                 {
                     Console.WriteLine(studentGrades[i].Crs_grade);
                     Button b = new Button();
                     b.Name = "open_Exam";             
-                    //we can't show courses ids' to user
-                    b.Text = studentGrades[i].Crs_Name/*+"-"+ studentGrades[i].Crs_id*/;
+                    //we can't show courses ids' to user  ^_^ ok i will hide it  
+                    b.Text = studentGrades[i].Crs_Name+"-"+ (studentGrades[i].Crs_id+100);
                     b.BackColor = Color.LightGray;
                     course_Panel.Controls.Add(b);
                     b.Size = new System.Drawing.Size(216, 32);
@@ -102,16 +100,15 @@ namespace ExaminationApp
 
         private void open_Exam_Click(object sender, EventArgs e)
         {
-            //Button s = (Button)sender;
-            //int id = int.Parse( s.Text.Substring(s.Text.IndexOf('-')+1));
-            new ExamPage().Visible = true;
+            Button s = (Button)sender;
+            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;        
+            new ExamPage(id).Visible = true;
                
            
         }
         private void showGrade_Click(object sender, EventArgs e)
         {
-            Button s = (Button)sender;
-            
+            Button s = (Button)sender;        
             for (int i = 0; i < studentGrades.Count; i++)
             {
                 if (s.Text == studentGrades[i].Crs_Name)

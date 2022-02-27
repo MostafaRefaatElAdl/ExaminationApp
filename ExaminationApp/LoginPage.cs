@@ -38,12 +38,13 @@ namespace ExaminationApp
                     {
                         if (student.St_National_id == int.Parse(nId) && student.St_Password == password)
                         {
-                            userFound = true;
+                            userFound = true;                  
                             DataAccess.UserIdToken = student.St_id;
                            StudentWelcomPage welcomePage = new StudentWelcomPage();
+                           
                             welcomePage.Show();
                             this.Hide();
-                            //this.Close();
+                           
                             break;
                         }
                     }
