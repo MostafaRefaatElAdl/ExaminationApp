@@ -88,5 +88,16 @@ namespace ExaminationApp
                 return QuesAndChoices;
             }
         }
+
+
+        public void InsertStudentAnswer(string st_ans, int q_id, int st_id, int exam_id)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                List<St_Answer> answers = new List<St_Answer>();
+                answers.Add(new St_Answer { St_ans = st_ans, Q_id = q_id, St_id = st_id, Exam_id = exam_id });
+                connection.Execute("dbo.insertStudentAnswer @St_ans, @Q_id, @St_id, Exam_id");
+            }
+        }
     }
 }

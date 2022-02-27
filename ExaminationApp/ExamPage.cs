@@ -16,6 +16,11 @@ namespace ExaminationApp
         // Global Atrributes
         int QuestionNumber = 1;
         int totalQuestions = 10;
+
+
+
+       
+
         List<Exam> listExams;
         int c_id; 
         public ExamPage(int id)
