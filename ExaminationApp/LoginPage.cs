@@ -43,8 +43,7 @@ namespace ExaminationApp
                            StudentWelcomPage welcomePage = new StudentWelcomPage();
                            
                             welcomePage.Show();
-                            this.Hide();
-                           
+                            this.Hide();             
                             break;
                         }
                     }
