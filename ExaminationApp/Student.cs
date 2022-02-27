@@ -8,7 +8,7 @@ namespace ExaminationApp
 {
     internal class Student
     {
-         public int St_id { get; set; }
+        public int St_id { get; set; }
         public string StF_Name { get; set; }
         public string StL_Name { get; set; } 
         public string St_Address { get; set; }

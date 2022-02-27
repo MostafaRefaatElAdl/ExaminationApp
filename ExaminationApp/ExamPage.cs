@@ -16,13 +16,11 @@ namespace ExaminationApp
         // Global Atrributes
         int QuestionNumber = 1;
         int totalQuestions = 10;
-
-
-
-       
-
         List<Exam> listExams;
-        int c_id; 
+        int c_id;
+        DataAccess da;
+        static string st_answer;
+
         public ExamPage(int id)
         {
             c_id = id;     
@@ -45,44 +43,15 @@ namespace ExaminationApp
 
         }
         // ======================================global list to carry Answers===========================
-        //List<string[]> answers = new List<string[]>();
+ 
         Dictionary<string, string[]> exam = new Dictionary<string, string[]>();
-        //List<String> Questions = new List<string>();
-
-        //========================================function to split choices =============================
-        //public string[] SplitChoices(string choices)
-        //{
-        //    string[] answer = choices.Split(',');
-        //    return answer;
-
-        //}
+     
         public void ShowQuetions()
         {
-            DataAccess da = new DataAccess();
+            da = new DataAccess();
             //Getting Quetions and it's choices from database
            listExams = da.GetExamQuestionsAndChoices(c_id);
-            ////==============================perpare list of Quetions=================================
-            //Questions.Add("Q1:Which of the following is the root of the hierarchy of all .NET types ?");
-            //Questions.Add("Q2:Which of the following is the root of the hierarchy of all .NET types ?");
-            //Questions.Add("Q3:Which of the following is the root of the hierarchy of all .NET types ?");
-            //Questions.Add("Q4:Which of the following is the root of the hierarchy of all .NET types ?");
-            //Questions.Add("Q5:Which of the following is the root of the hierarchy of all .NET types ?");
-            //==============================perpare list of Answers=================================
-
-
-            //string Answer1 = "False1,True,";
-            //string Answer2 = "Depends on DBA2,Depends on number of Columns,Only 1,Only 2,";
-            //string Answer3 = "False3,True,";
-            //string Answer4 = "Depends on DBA4,Depends on number of Columns,Only 1,Only 2,";
-            //string Answer5 = "False5,True,";
-
-            //// i will call function 
-            //answers.Add(SplitChoices(Answer1));
-            //answers.Add(SplitChoices(Answer2));
-            //answers.Add(SplitChoices(Answer3));
-            //answers.Add(SplitChoices(Answer4));
-            //answers.Add(SplitChoices(Answer5));
-
+  
             //=========================================  define dictionary which connect between Qustions & choices==============================
             for (int i = 0; i < listExams.Count; i++)
             {
@@ -128,51 +97,55 @@ namespace ExaminationApp
         // this function use to display Quesrions with its choices
         private void AskQuetions(int Qnum)
         {
-            switch (Qnum)
-            {
-                case 1:
-                    lbQ.Text = exam.Keys.ElementAt(0);
-                    DisplayChoices(exam.Values.ElementAt(0));
-                    break;
-                case 2:
-                    lbQ.Text = exam.Keys.ElementAt(1);
-                    DisplayChoices(exam.Values.ElementAt(1));
-                    break;
-                case 3:
-                    lbQ.Text = exam.Keys.ElementAt(2);
-                    DisplayChoices(exam.Values.ElementAt(2));
-                    break;
+            lbQ.Text = exam.Keys.ElementAt(Qnum-1);
+            DisplayChoices(exam.Values.ElementAt(Qnum-1));
+            #region
+            /*  switch (Qnum)
+              {
+                  case 1:
+                      lbQ.Text = exam.Keys.ElementAt(0);
+                      DisplayChoices(exam.Values.ElementAt(0));
+                      break;
+                  case 2:
+                      lbQ.Text = exam.Keys.ElementAt(1);
+                      DisplayChoices(exam.Values.ElementAt(1));
+                      break;
+                  case 3:
+                      lbQ.Text = exam.Keys.ElementAt(2);
+                      DisplayChoices(exam.Values.ElementAt(2));
+                      break;
 
-                case 4:
-                    lbQ.Text = exam.Keys.ElementAt(3);
-                    DisplayChoices(exam.Values.ElementAt(3));
-                    break;
-                case 5:
-                    lbQ.Text = exam.Keys.ElementAt(4);
-                    DisplayChoices(exam.Values.ElementAt(4));
-                    break;
-                case 6:
-                    lbQ.Text = exam.Keys.ElementAt(5);
-                    DisplayChoices(exam.Values.ElementAt(5));
-                    break;
-                case 7:
-                    lbQ.Text = exam.Keys.ElementAt(6);
-                    DisplayChoices(exam.Values.ElementAt(6));
-                    break;
-                case 8:
-                    lbQ.Text = exam.Keys.ElementAt(7);
-                    DisplayChoices(exam.Values.ElementAt(7));
-                    break;
+                  case 4:
+                      lbQ.Text = exam.Keys.ElementAt(3);
+                      DisplayChoices(exam.Values.ElementAt(3));
+                      break;
+                  case 5:
+                      lbQ.Text = exam.Keys.ElementAt(4);
+                      DisplayChoices(exam.Values.ElementAt(4));
+                      break;
+                  case 6:
+                      lbQ.Text = exam.Keys.ElementAt(5);
+                      DisplayChoices(exam.Values.ElementAt(5));
+                      break;
+                  case 7:
+                      lbQ.Text = exam.Keys.ElementAt(6);
+                      DisplayChoices(exam.Values.ElementAt(6));
+                      break;
+                  case 8:
+                      lbQ.Text = exam.Keys.ElementAt(7);
+                      DisplayChoices(exam.Values.ElementAt(7));
+                      break;
 
-                case 9:
-                    lbQ.Text = exam.Keys.ElementAt(8);
-                    DisplayChoices(exam.Values.ElementAt(8));
-                    break;
-                case 10:
-                    lbQ.Text = exam.Keys.ElementAt(9);
-                    DisplayChoices(exam.Values.ElementAt(9));
-                    break;
-            }
+                  case 9:
+                      lbQ.Text = exam.Keys.ElementAt(8);
+                      DisplayChoices(exam.Values.ElementAt(8));
+                      break;
+                  case 10:
+                      lbQ.Text = exam.Keys.ElementAt(9);
+                      DisplayChoices(exam.Values.ElementAt(9));
+                      break;
+              }*/
+            #endregion
         }
 
         // this function to know which choice Student select it
@@ -180,6 +153,7 @@ namespace ExaminationApp
         {
             RadioButton myChoice = (RadioButton) sender;
             this.Text = myChoice.Text;
+            st_answer = myChoice.Text;
         }
 
 
@@ -188,9 +162,10 @@ namespace ExaminationApp
         private void next_Click(object sender, EventArgs e)
         {
             if (QuestionNumber < totalQuestions)
-            {
-                QuestionNumber++;
+            {           
                 AskQuetions(QuestionNumber);
+                da.InsertStudentAnswer(st_answer, listExams[QuestionNumber].Q_id, LoginPage.student_id, listExams[0].Exam_id);
+                QuestionNumber++;
             }
             else
             {

@@ -14,7 +14,7 @@ namespace ExaminationApp
     {
         List<Student> students;
         List<Instructor> instructors;
-
+        public static int student_id;
         public LoginPage()
         {
             InitializeComponent();
@@ -40,7 +40,8 @@ namespace ExaminationApp
                         {
                             userFound = true;                  
                             DataAccess.UserIdToken = student.St_id;
-                           StudentWelcomPage welcomePage = new StudentWelcomPage();
+                            student_id = student.St_id;
+                            StudentWelcomPage welcomePage = new StudentWelcomPage();
                            
                             welcomePage.Show();
                             this.Hide();             

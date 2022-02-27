@@ -96,7 +96,7 @@ namespace ExaminationApp
             {
                 List<St_Answer> answers = new List<St_Answer>();
                 answers.Add(new St_Answer { St_ans = st_ans, Q_id = q_id, St_id = st_id, Exam_id = exam_id });
-                connection.Execute("dbo.insertStudentAnswer @St_ans, @Q_id, @St_id, Exam_id");
+                connection.Execute("dbo.insertStudentAnswer @St_ans, @Q_id, @St_id, @Exam_id", new { St_ans = st_ans, Q_id = q_id, St_id = st_id, Exam_id = exam_id });
             }
         }
     }
