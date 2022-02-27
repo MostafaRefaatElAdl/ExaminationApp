@@ -85,6 +85,7 @@
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Exam.cs" />
+    <Compile Include="St_Answer.cs" />
     <Compile Include="WelcomeInsPage.cs">
       <SubType>Form</SubType>
     </Compile>
