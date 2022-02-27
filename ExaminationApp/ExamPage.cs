@@ -44,7 +44,7 @@ namespace ExaminationApp
         {
             DataAccess da = new DataAccess();
             //Getting Quetions and it's choices from database
-            List<Exam> listExams = da.GetExamQuestionsAndChoices();
+            List<Exam> listExams = da.GetExamQuestionsAndChoices(2);
             ////==============================perpare list of Quetions=================================
             //Questions.Add("Q1:Which of the following is the root of the hierarchy of all .NET types ?");
             //Questions.Add("Q2:Which of the following is the root of the hierarchy of all .NET types ?");
