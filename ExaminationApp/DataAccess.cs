@@ -99,5 +99,15 @@ namespace ExaminationApp
                 connection.Execute("dbo.insertStudentAnswer @St_ans, @Q_id, @St_id, @Exam_id", new { St_ans = st_ans, Q_id = q_id, St_id = st_id, Exam_id = exam_id });
             }
         }
+
+        public void InsertStudentExam(int exam_duration, DateTime start_time, int crs_id)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                List<Exam> exams = new List<Exam>();
+                exams.Add(new Exam {Exam_Duration = exam_duration, Start_time=start_time, Crs_id= crs_id});
+                connection.Execute("dbo.insertExam @ExamDuration, @ExamStartDate ,@courseID ", new { ExamDuration = exam_duration, ExamStartDate = start_time, courseID = crs_id });
+            }
+        }
     }
 }

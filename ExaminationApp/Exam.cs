@@ -13,6 +13,10 @@ namespace ExaminationApp
         public int Exam_id { get; set; }      
         public string Q_desc { get; set; }
         public string Q_choices { get; set; }
+        public DateTime Start_time { get; set; }
+        public int Exam_Duration { get; set; }
+        public int Crs_id { get; set; }
+
 
         public string[] SplitChoices()
         {

@@ -37,7 +37,8 @@ namespace ExaminationApp
                 this.Close();
             }
             else 
-            { 
+            {
+                da.InsertStudentExam(30,new DateTime(2022,5,13), c_id);
                 AskQuetions(QuestionNumber);
             }
 
