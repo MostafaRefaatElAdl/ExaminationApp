@@ -14,7 +14,7 @@ namespace ExaminationApp
     public partial class ExamPage : Form
     {
         // Global Atrributes
-        int QuestionNumber = 1;
+        int QuestionNumber = 0;
         int totalQuestions = 10;
         List<Exam> listExams;
         int c_id;
@@ -97,8 +97,8 @@ namespace ExaminationApp
         // this function use to display Quesrions with its choices
         private void AskQuetions(int Qnum)
         {
-            lbQ.Text = exam.Keys.ElementAt(Qnum-1);
-            DisplayChoices(exam.Values.ElementAt(Qnum-1));
+            lbQ.Text = exam.Keys.ElementAt(Qnum);
+            DisplayChoices(exam.Values.ElementAt(Qnum));
             #region
             /*  switch (Qnum)
               {
@@ -152,8 +152,9 @@ namespace ExaminationApp
         private void CheckAnswerEvent(object sender, EventArgs e)
         {
             RadioButton myChoice = (RadioButton) sender;
-            this.Text = myChoice.Text;
+            
             st_answer = myChoice.Text;
+            
         }
 
 
@@ -161,31 +162,47 @@ namespace ExaminationApp
 
         private void next_Click(object sender, EventArgs e)
         {
-            if (QuestionNumber < totalQuestions)
-            {           
-                AskQuetions(QuestionNumber);
-                da.InsertStudentAnswer(st_answer, listExams[QuestionNumber].Q_id, LoginPage.student_id, listExams[0].Exam_id);
-                QuestionNumber++;
-            }
-            else
+            if (st_answer != null)
             {
-                lbQ.Text = "Exam finished,best wishes ";
-                Choice1.Hide();
-                Choice2.Hide();
-                Choice3.Hide();
-                Choice4.Hide();
-                next.Hide();
+                da.InsertStudentAnswer(st_answer, listExams[QuestionNumber].Q_id, LoginPage.student_id, listExams[QuestionNumber].Exam_id);
+                QuestionNumber++;
+                if (QuestionNumber < totalQuestions)
+                {
+
+                    AskQuetions(QuestionNumber);
+             
+                    
+                    //AskQuetions(QuestionNumber);
+                    //QuestionNumber++;
+                    
+                    ClearRadio();
+                }
+                else
+                {
+                    lbQ.Text = "Exam finished,best wishes ";
+                    Choice1.Hide();
+                    Choice2.Hide();
+                    Choice3.Hide();
+                    Choice4.Hide();
+                    next.Hide();
+                }
             }
-           
+            else {
+                MessageBox.Show("Please choose an answer!", "Warning!");
+            }
+            
+            
 
         }
 
-        private void Choice1_Paint(object sender, PaintEventArgs e)
-        {
+     
+
+        private void ClearRadio() {
             Choice1.Checked = false;
             Choice2.Checked = false;
             Choice3.Checked = false;
             Choice4.Checked = false;
+            st_answer = null;
         }
 
     }

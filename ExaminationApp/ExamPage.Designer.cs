@@ -56,7 +56,7 @@
             this.Choice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Choice1.UseVisualStyleBackColor = true;
             this.Choice1.Click += new System.EventHandler(this.CheckAnswerEvent);
-            this.Choice1.Paint += new System.Windows.Forms.PaintEventHandler(this.Choice1_Paint);
+            //this.Choice1.Paint += new System.Windows.Forms.PaintEventHandler(this.Choice1_Paint);
             // 
             // Choice2
             // 
@@ -64,7 +64,6 @@
             this.Choice2.Name = "Choice2";
             this.Choice2.Size = new System.Drawing.Size(188, 33);
             this.Choice2.TabIndex = 2;
-            this.Choice2.TabStop = true;
             this.Choice2.Tag = "2";
             this.Choice2.Text = "text2";
             this.Choice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,7 +88,6 @@
             this.Choice4.Name = "Choice4";
             this.Choice4.Size = new System.Drawing.Size(188, 33);
             this.Choice4.TabIndex = 4;
-            this.Choice4.TabStop = true;
             this.Choice4.Tag = "4";
             this.Choice4.Text = "text4";
             this.Choice4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
