@@ -20,7 +20,7 @@ namespace ExaminationApp
         int c_id;
         DataAccess da;
         static string st_answer;
-
+        
         public ExamPage(int id)
         {
             c_id = id;     
@@ -32,17 +32,17 @@ namespace ExaminationApp
         {
             
             ShowQuetions();
-            //if (listExams.Count == 0)
-            //{
-            //    MessageBox.Show("not Available");
-            //    this.Close();
-            //}
-            //else 
-            //{
-            AskQuetions(QuestionNumber);
-            //}
-
+            if (listExams.Count == 0)
+            {
+                MessageBox.Show("not Available");
+                this.Close();
+            }
+            else
+            {
+                AskQuetions(QuestionNumber);
         }
+
+    }
         // ======================================global list to carry Answers===========================
         
         Dictionary<string, string[]> exam = new Dictionary<string, string[]>();
@@ -169,13 +169,7 @@ namespace ExaminationApp
                 QuestionNumber++;
                 if (QuestionNumber < totalQuestions)
                 {
-
                     AskQuetions(QuestionNumber);
-             
-                    
-                    //AskQuetions(QuestionNumber);
-                    //QuestionNumber++;
-                    
                     ClearRadio();
                 }
                 else
@@ -187,6 +181,7 @@ namespace ExaminationApp
                     Choice4.Hide();
                     next.Hide();
                     da.GetExamGrade(LoginPage.student_id,c_id);
+                    btnFinish.Show();
 
                 }
             }
@@ -209,6 +204,11 @@ namespace ExaminationApp
         }
 
         private void ExamPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

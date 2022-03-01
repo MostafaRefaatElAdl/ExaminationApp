@@ -167,10 +167,11 @@
             this.crsNameLabel.AutoSize = true;
             this.crsNameLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.crsNameLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.crsNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crsNameLabel.Location = new System.Drawing.Point(3, 0);
             this.crsNameLabel.Name = "crsNameLabel";
             this.crsNameLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.crsNameLabel.Size = new System.Drawing.Size(95, 59);
+            this.crsNameLabel.Size = new System.Drawing.Size(94, 59);
             this.crsNameLabel.TabIndex = 0;
             this.crsNameLabel.Text = "lab1                      ";
             // 
@@ -179,10 +180,11 @@
             this.gradeLabel.AutoSize = true;
             this.gradeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gradeLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gradeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradeLabel.Location = new System.Drawing.Point(106, 0);
             this.gradeLabel.Name = "gradeLabel";
             this.gradeLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.gradeLabel.Size = new System.Drawing.Size(80, 59);
+            this.gradeLabel.Size = new System.Drawing.Size(88, 59);
             this.gradeLabel.TabIndex = 1;
             this.gradeLabel.Text = "lab2           ";
             // 

@@ -84,8 +84,7 @@ namespace ExaminationApp
                 {
                     Console.WriteLine(studentGrades[i].Crs_grade);
                     Button b = new Button();
-                    b.Name = "open_Exam";             
-                    //we can't show courses ids' to user  ^_^ ok i will hide it  
+                    b.Name = "open_Exam";              
                     b.Text = studentGrades[i].Crs_Name+"-"+ (studentGrades[i].Crs_id+100);
                     b.BackColor = Color.LightGray;
                     course_Panel.Controls.Add(b);
@@ -102,10 +101,7 @@ namespace ExaminationApp
         {
             Button s = (Button)sender;
             int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;
-            //da.InsertStudentExam(30, new DateTime(2022, 5, 13), id);
             new ExamPage(id).Visible = true;
-            
-
         }
         private void showGrade_Click(object sender, EventArgs e)
         {
