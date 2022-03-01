@@ -84,6 +84,11 @@
     <Compile Include="Application\StudentWelcomPage.Designer.cs">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Exam.cs" />
+    <Compile Include="St_Answer.cs" />
+    <EmbeddedResource Include="ExamPage.resx">
+=======
     <Compile Include="Classes\Exam.cs" />
     <Compile Include="Classes\St_Answer.cs" />
     <Compile Include="WelcomeInsPage.cs">
@@ -93,6 +98,7 @@
       <DependentUpon>WelcomeInsPage.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Application\ExamPage.resx">
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049
       <DependentUpon>ExamPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Application\LoginPage.resx">
@@ -106,9 +112,12 @@
     <EmbeddedResource Include="Application\StudentWelcomPage.resx">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
     <EmbeddedResource Include="WelcomeInsPage.resx">
       <DependentUpon>WelcomeInsPage.cs</DependentUpon>
     </EmbeddedResource>
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

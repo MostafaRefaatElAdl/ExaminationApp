@@ -100,7 +100,12 @@ namespace ExaminationApp
         private void open_Exam_Click(object sender, EventArgs e)
         {
             Button s = (Button)sender;
+<<<<<<< HEAD:ExaminationApp/StudentWelcomPage.cs
+            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100; 
+            
+=======
             int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049:ExaminationApp/Application/StudentWelcomPage.cs
             new ExamPage(id).Visible = true;
         }
         private void showGrade_Click(object sender, EventArgs e)
@@ -118,9 +123,15 @@ namespace ExaminationApp
             }
         }
 
+<<<<<<< HEAD:ExaminationApp/StudentWelcomPage.cs
+        private void StudentWelcomPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          Application.Exit();
+=======
         private void StudentWelcomPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049:ExaminationApp/Application/StudentWelcomPage.cs
         }
     }
 }
