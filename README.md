@@ -4,7 +4,7 @@
 Technologies used : SQL Server, C#, Dapper  
 
 ## Instruction:   
-1- Download the prject  
+1- Download the project  
 2- Restore the Database using SQL Server MS  
 3- Run the "ExaminationApp.sln" File at the root folder using Visual Studio 2022  
 4- Run the project And login with any Credentials from "ExaminationApp/LoginData/LoginData.png"  
