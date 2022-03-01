@@ -27,24 +27,24 @@ namespace ExaminationApp
             InitializeComponent();
 
         }
-
+        
         private void ExamPage_Load(object sender, EventArgs e)
         {
+            
             ShowQuetions();
-            if (listExams.Count == 0)
-            {
-                MessageBox.Show("not Available");
-                this.Close();
-            }
-            else 
-            {
-                da.InsertStudentExam(30,new DateTime(2022,5,13), c_id);
-                AskQuetions(QuestionNumber);
-            }
+            //if (listExams.Count == 0)
+            //{
+            //    MessageBox.Show("not Available");
+            //    this.Close();
+            //}
+            //else 
+            //{
+            AskQuetions(QuestionNumber);
+            //}
 
         }
         // ======================================global list to carry Answers===========================
- 
+        
         Dictionary<string, string[]> exam = new Dictionary<string, string[]>();
      
         public void ShowQuetions()
@@ -58,7 +58,7 @@ namespace ExaminationApp
             {
                 exam.Add(listExams[i].Q_desc, listExams[i].SplitChoices());
             }
-
+            
 
         }
        

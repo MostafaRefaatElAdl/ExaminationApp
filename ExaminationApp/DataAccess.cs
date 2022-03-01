@@ -90,6 +90,7 @@ namespace ExaminationApp
         }
 
 
+
         public void InsertStudentAnswer(string st_ans, int q_id, int st_id, int exam_id)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
@@ -107,6 +108,15 @@ namespace ExaminationApp
                 List<Exam> exams = new List<Exam>();
                 exams.Add(new Exam {Exam_Duration = exam_duration, Start_time=start_time, Crs_id= crs_id});
                 connection.Execute("dbo.insertExam @ExamDuration, @ExamStartDate ,@courseID ", new { ExamDuration = exam_duration, ExamStartDate = start_time, courseID = crs_id });
+            }
+        }
+
+        public List<StudentCourses> GetExamGrade(int crs_id)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
+            {
+                var QuesAndChoices = connection.Query<StudentCourses>("dbo.ExamCorrection @studentId ,@examId ", new { courseId = crs_id }).ToList();
+                return QuesAndChoices;
             }
         }
     }

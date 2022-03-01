@@ -101,10 +101,11 @@ namespace ExaminationApp
         private void open_Exam_Click(object sender, EventArgs e)
         {
             Button s = (Button)sender;
-            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;        
+            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;
+            //da.InsertStudentExam(30, new DateTime(2022, 5, 13), id);
             new ExamPage(id).Visible = true;
-               
-           
+            
+
         }
         private void showGrade_Click(object sender, EventArgs e)
         {

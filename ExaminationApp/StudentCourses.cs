@@ -8,6 +8,9 @@ namespace ExaminationApp
 {
     internal class StudentCourses
     {
+        public int St_id { get; set; }
+        public int Crs_id { get; set; }
+        public int Crs_grade { get; set; }
 
     }
 }
