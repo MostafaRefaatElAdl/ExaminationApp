@@ -9,6 +9,6 @@ Technologies used : SQL Server, C#, Dapper
 3- Run the "ExaminationApp.sln" File at the root folder using Visual Studio 2022  
 4- Run the project And login with any Credentials from "ExaminationApp/LoginData/LoginData.png"  
 5- Choose the Course from Courses Tab you want to have exam at  
-6- Start picking out the right answers and hit next and finish  
+6- Start picking out the right answers and hit next and then finish  
 7- Run again with the same credentials  
 8- Go to Grades Tab and choose the course to show the grade  
