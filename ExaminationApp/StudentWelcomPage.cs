@@ -101,7 +101,8 @@ namespace ExaminationApp
         private void open_Exam_Click(object sender, EventArgs e)
         {
             Button s = (Button)sender;
-            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100;        
+            int id = int.Parse(s.Text.Substring(s.Text.IndexOf('-') + 1))-100; 
+            
             new ExamPage(id).Visible = true;
                
            
@@ -120,6 +121,10 @@ namespace ExaminationApp
                 }
             }
         }
-       
+
+        private void StudentWelcomPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+          Application.Exit();
+        }
     }
 }

@@ -42,9 +42,9 @@ namespace ExaminationApp
                             DataAccess.UserIdToken = student.St_id;
                             student_id = student.St_id;
                             StudentWelcomPage welcomePage = new StudentWelcomPage();
-                           
-                            welcomePage.Show();
-                            this.Hide();             
+                          
+                            welcomePage.Show();                          
+                            this.Hide();            
                             break;
                         }
                     }
@@ -56,16 +56,16 @@ namespace ExaminationApp
 
                     foreach (Instructor instructor in instructors)
                     {
-                        if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
-                        {
-                            userFound = true;
-                            DataAccess.UserIdToken = instructor.Ins_id;
-                            WelcomeInsPage welcomeInsPage=new WelcomeInsPage();
-                            welcomeInsPage.Show();
-                            this.Hide();
-                            //this.Close();
-                            break;
-                        }
+                        //if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
+                        //{
+                        //    userFound = true;
+                        //    DataAccess.UserIdToken = instructor.Ins_id;
+                        //  //  InstructorWelcomPage welcomeInsPage =new InstructorWelcomPage();
+                        //    welcomeInsPage.Show();
+                        //    this.Hide();
+                          
+                        //    break;
+                        //}
                     }
                 }
                 if (!userFound)
@@ -77,78 +77,12 @@ namespace ExaminationApp
             catch (Exception ex)
             {
                
-               // MessageBox.Show("Please Inputs valid data First", "Error");
+             
                 MessageBox.Show(ex.Message);
 
             }
 
 
-
-            /*
-                        if (!checkd) { 
-                        try
-                        {
-                            string nId = textBox1.Text;
-                            string password = textBox2.Text;
-                            students = da.getAllStudents();
-                            bool userFound = false;
-
-                            foreach (Student student in students)
-                            {
-                                if (student.St_National_id ==int.Parse(nId) && student.St_Password == password)
-                                {
-                                    userFound = true;
-                                    DataAccess.UserIdToken = student.St_id;
-                                    WelcomePage welcomePage = new WelcomePage();
-                                    welcomePage.Show();
-                                    this.Hide();
-                                    //this.Close();
-                                    break;
-                                }  
-                            }
-                            if (!userFound)
-                            {
-                                MessageBox.Show("User Not Found, Please check username and password again", "Error");
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Please Inputs valid data First", "Error");
-                        }
-                        }
-                        else
-                        {
-                            try
-                            {
-                                bool userFound = false;
-                                string nId = textBox1.Text;
-                                string password = textBox2.Text;
-                                instructors = da.getAllInstructors();
-
-                                foreach (Instructor instructor in instructors)
-                                {
-                                    if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
-                                    {
-                                        userFound = true;
-                                        DataAccess.UserIdToken = instructor.Ins_id;
-                                        WelcomePage welcomePage = new WelcomePage();
-                                        welcomePage.Show();
-                                        this.Hide();
-                                        //this.Close();
-                                        break;
-                                    }
-                                }
-                                if (!userFound)
-                                {
-                                    MessageBox.Show("User Not Found, Please check username and password again", "Error");
-                                }
-                            }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("Please Inputs valid data First", "Error");
-                            }
-                        }
-            */
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -157,32 +91,13 @@ namespace ExaminationApp
             label2.BackColor = System.Drawing.Color.Transparent;
             checkBox1.BackColor= System.Drawing.Color.Transparent;
 
-
         }
-        /*
-* 
-* 
-* 
-instructors = da.getAllInstructors();
 
-                foreach (Instructor instructor in instructors)
-                {
-                    if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
-                    {
-                        userFound = true;
-                        DataAccess.UserIdToken = instructor.Ins_id;
-                        WelcomePage welcomePage = new WelcomePage();
-                        welcomePage.Show();
-                        this.Hide();
-                        //this.Close();
-                        break;
-                    }
-                }
-                if (!userFound)
-                {
-                    MessageBox.Show("User Not Found, Please check username and password again", "Error");
-                }
-* */
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+     
 
 
 

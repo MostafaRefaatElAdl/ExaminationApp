@@ -100,6 +100,8 @@ namespace ExaminationApp
             }
         }
 
+        
+
         public void InsertStudentExam(int exam_duration, DateTime start_time, int crs_id)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))

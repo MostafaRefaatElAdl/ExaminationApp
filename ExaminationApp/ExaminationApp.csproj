@@ -86,18 +86,6 @@
     </Compile>
     <Compile Include="Exam.cs" />
     <Compile Include="St_Answer.cs" />
-    <Compile Include="WelcomeInsPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WelcomeInsPage.Designer.cs">
-      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="WelcomeStPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WelcomeStPage.Designer.cs">
-      <DependentUpon>WelcomeStPage.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="ExamPage.resx">
       <DependentUpon>ExamPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,12 +99,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentWelcomPage.resx">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeInsPage.resx">
-      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeStPage.resx">
-      <DependentUpon>WelcomeStPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

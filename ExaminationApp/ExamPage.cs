@@ -62,10 +62,7 @@ namespace ExaminationApp
 
         }
        
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         // this function use to display choices , increasing length by one because there are comma(,) in the end of input
         private void DisplayChoices(string[] choices)
         {
@@ -100,60 +97,13 @@ namespace ExaminationApp
         {
             lbQ.Text = exam.Keys.ElementAt(Qnum);
             DisplayChoices(exam.Values.ElementAt(Qnum));
-            #region
-            /*  switch (Qnum)
-              {
-                  case 1:
-                      lbQ.Text = exam.Keys.ElementAt(0);
-                      DisplayChoices(exam.Values.ElementAt(0));
-                      break;
-                  case 2:
-                      lbQ.Text = exam.Keys.ElementAt(1);
-                      DisplayChoices(exam.Values.ElementAt(1));
-                      break;
-                  case 3:
-                      lbQ.Text = exam.Keys.ElementAt(2);
-                      DisplayChoices(exam.Values.ElementAt(2));
-                      break;
-
-                  case 4:
-                      lbQ.Text = exam.Keys.ElementAt(3);
-                      DisplayChoices(exam.Values.ElementAt(3));
-                      break;
-                  case 5:
-                      lbQ.Text = exam.Keys.ElementAt(4);
-                      DisplayChoices(exam.Values.ElementAt(4));
-                      break;
-                  case 6:
-                      lbQ.Text = exam.Keys.ElementAt(5);
-                      DisplayChoices(exam.Values.ElementAt(5));
-                      break;
-                  case 7:
-                      lbQ.Text = exam.Keys.ElementAt(6);
-                      DisplayChoices(exam.Values.ElementAt(6));
-                      break;
-                  case 8:
-                      lbQ.Text = exam.Keys.ElementAt(7);
-                      DisplayChoices(exam.Values.ElementAt(7));
-                      break;
-
-                  case 9:
-                      lbQ.Text = exam.Keys.ElementAt(8);
-                      DisplayChoices(exam.Values.ElementAt(8));
-                      break;
-                  case 10:
-                      lbQ.Text = exam.Keys.ElementAt(9);
-                      DisplayChoices(exam.Values.ElementAt(9));
-                      break;
-              }*/
-            #endregion
+          
         }
 
         // this function to know which choice Student select it
         private void CheckAnswerEvent(object sender, EventArgs e)
         {
-            RadioButton myChoice = (RadioButton) sender;
-            
+            RadioButton myChoice = (RadioButton) sender;        
             st_answer = myChoice.Text;
             
         }
@@ -169,13 +119,7 @@ namespace ExaminationApp
                 QuestionNumber++;
                 if (QuestionNumber < totalQuestions)
                 {
-
-                    AskQuetions(QuestionNumber);
-             
-                    
-                    //AskQuetions(QuestionNumber);
-                    //QuestionNumber++;
-                    
+                    AskQuetions(QuestionNumber);         
                     ClearRadio();
                 }
                 else
@@ -186,6 +130,8 @@ namespace ExaminationApp
                     Choice3.Hide();
                     Choice4.Hide();
                     next.Hide();
+                    //insert grade 
+
                 }
             }
             else {
