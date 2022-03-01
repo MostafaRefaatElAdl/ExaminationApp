@@ -1,9 +1,9 @@
 # ExaminationApp
- ##SQL database and an automated system that can perform exams.  
+ ## SQL database and an automated system that can perform exams.  
 
 Technologies used : SQL Server, C#, Dapper  
 
-##Instruction:   
+## Instruction:   
 1- Download the prject  
 2- Restore the Database using SQL Server MS  
 3- Run the "ExaminationApp.sln" File at the root folder using Visual Studio 2022  
