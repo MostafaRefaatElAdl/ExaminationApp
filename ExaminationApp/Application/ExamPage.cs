@@ -186,6 +186,8 @@ namespace ExaminationApp
                     Choice3.Hide();
                     Choice4.Hide();
                     next.Hide();
+                    da.GetExamGrade(LoginPage.student_id,c_id);
+
                 }
             }
             else {
@@ -206,5 +208,9 @@ namespace ExaminationApp
             st_answer = null;
         }
 
+        private void ExamPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

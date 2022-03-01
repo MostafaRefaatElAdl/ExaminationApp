@@ -111,12 +111,13 @@ namespace ExaminationApp
             }
         }
 
-        public List<StudentCourses> GetExamGrade(int crs_id)
+        public void GetExamGrade(int student_id,int crs_id)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.cnnVal("ExaminationSystem")))
             {
-                var QuesAndChoices = connection.Query<StudentCourses>("dbo.ExamCorrection @studentId ,@examId ", new { courseId = crs_id }).ToList();
-                return QuesAndChoices;
+                List<St_Crs> grades = new List<St_Crs>();
+                grades.Add(new St_Crs { St_id = student_id, Crs_id = crs_id });
+                connection.Execute("dbo.ExamCorrection @studentId, @courseID", new { studentId = student_id, courseID = crs_id});
             }
         }
     }

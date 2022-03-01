@@ -56,7 +56,6 @@
             this.Choice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Choice1.UseVisualStyleBackColor = true;
             this.Choice1.Click += new System.EventHandler(this.CheckAnswerEvent);
-            //this.Choice1.Paint += new System.Windows.Forms.PaintEventHandler(this.Choice1_Paint);
             // 
             // Choice2
             // 
@@ -118,6 +117,7 @@
             this.Controls.Add(this.lbQ);
             this.Name = "ExamPage";
             this.Text = "ExamPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExamPage_FormClosed);
             this.Load += new System.EventHandler(this.ExamPage_Load);
             this.ResumeLayout(false);
 

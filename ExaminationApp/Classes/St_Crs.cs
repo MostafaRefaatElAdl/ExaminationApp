@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExaminationApp
 {
-    internal class StudentCourses
+    internal class St_Crs
     {
         public int St_id { get; set; }
         public int Crs_id { get; set; }

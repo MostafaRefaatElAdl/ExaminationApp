@@ -121,6 +121,10 @@ namespace ExaminationApp
                 }
             }
         }
-       
+
+        private void StudentWelcomPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -36,9 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.header_stname_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.crsNameLabel = new System.Windows.Forms.Label();
             this.gradeLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelSliderMenue.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -145,31 +145,6 @@
             this.panel2.Size = new System.Drawing.Size(714, 469);
             this.panel2.TabIndex = 2;
             // 
-            // crsNameLabel
-            // 
-            this.crsNameLabel.AutoSize = true;
-            this.crsNameLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.crsNameLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.crsNameLabel.Location = new System.Drawing.Point(3, 0);
-            this.crsNameLabel.Name = "crsNameLabel";
-            this.crsNameLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.crsNameLabel.Size = new System.Drawing.Size(95, 59);
-            this.crsNameLabel.TabIndex = 0;
-            this.crsNameLabel.Text = "lab1                      ";
-            
-            // 
-            // gradeLabel
-            // 
-            this.gradeLabel.AutoSize = true;
-            this.gradeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.gradeLabel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gradeLabel.Location = new System.Drawing.Point(106, 0);
-            this.gradeLabel.Name = "gradeLabel";
-            this.gradeLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.gradeLabel.Size = new System.Drawing.Size(80, 59);
-            this.gradeLabel.TabIndex = 1;
-            this.gradeLabel.Text = "lab2           ";
-            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -187,6 +162,30 @@
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Visible = false;
             // 
+            // crsNameLabel
+            // 
+            this.crsNameLabel.AutoSize = true;
+            this.crsNameLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.crsNameLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.crsNameLabel.Location = new System.Drawing.Point(3, 0);
+            this.crsNameLabel.Name = "crsNameLabel";
+            this.crsNameLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.crsNameLabel.Size = new System.Drawing.Size(95, 59);
+            this.crsNameLabel.TabIndex = 0;
+            this.crsNameLabel.Text = "lab1                      ";
+            // 
+            // gradeLabel
+            // 
+            this.gradeLabel.AutoSize = true;
+            this.gradeLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.gradeLabel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gradeLabel.Location = new System.Drawing.Point(106, 0);
+            this.gradeLabel.Name = "gradeLabel";
+            this.gradeLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.gradeLabel.Size = new System.Drawing.Size(80, 59);
+            this.gradeLabel.TabIndex = 1;
+            this.gradeLabel.Text = "lab2           ";
+            // 
             // StudentWelcomPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +197,7 @@
             this.Controls.Add(this.panelSliderMenue);
             this.Name = "StudentWelcomPage";
             this.Text = "StudentWelcomPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentWelcomPage_FormClosed);
             this.Load += new System.EventHandler(this.StudentWelcomPage_Load);
             this.panelSliderMenue.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

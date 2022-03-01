@@ -159,29 +159,34 @@ namespace ExaminationApp
 
 
         }
+
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
         /*
 * 
 * 
 * 
 instructors = da.getAllInstructors();
 
-                foreach (Instructor instructor in instructors)
-                {
-                    if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
-                    {
-                        userFound = true;
-                        DataAccess.UserIdToken = instructor.Ins_id;
-                        WelcomePage welcomePage = new WelcomePage();
-                        welcomePage.Show();
-                        this.Hide();
-                        //this.Close();
-                        break;
-                    }
-                }
-                if (!userFound)
-                {
-                    MessageBox.Show("User Not Found, Please check username and password again", "Error");
-                }
+       foreach (Instructor instructor in instructors)
+       {
+           if (instructor.Ins_National_id == int.Parse(nId) && instructor.Ins_Password == password)
+           {
+               userFound = true;
+               DataAccess.UserIdToken = instructor.Ins_id;
+               WelcomePage welcomePage = new WelcomePage();
+               welcomePage.Show();
+               this.Hide();
+               //this.Close();
+               break;
+           }
+       }
+       if (!userFound)
+       {
+           MessageBox.Show("User Not Found, Please check username and password again", "Error");
+       }
 * */
 
 
