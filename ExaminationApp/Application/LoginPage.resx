@@ -121,11 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEIAAABcCAYAAADaiGMDAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-<<<<<<< HEAD:ExaminationApp/LoginPage.resx
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAASeSURBVHhe7ZrP
-=======
         wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAASeSURBVHhe7ZrP
->>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049:ExaminationApp/Application/LoginPage.resx
         ihVXEIfzKOoYdYSskoXZRQLqE7jxFYJgNkL2gq+QhaKZIUYZxsExGv+MIij4ApIsAoGQRRaCxG3Am/Mb
         qkxNWedWne4z7e2+54NvIfY9c+qzb992+n4ya+zSQhAtBNFCEC0E0UIQLQTRQhAtBNFCEC0E0UIQ4RBP
         zp6b3Tz62XunhhtCDs/eTj4jp0JxiDtJjjClGHNDbJw8PbuSBpUhdISlCIEIbC4CO3bCIa7SwDnHTjjE
@@ -151,7 +147,7 @@
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABMMAAAG9CAYAAAAY+bEtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAA/7JJREFUeF7s/X2btlf5lgn6hWbEtmmYmZ4e7KZxum2nX8buVJ6qp+qh7W5pAYkS
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/X2btlf5lgn6hWbEtmmYmZ4e7KZxum2nX8buVJ6qp+qh7W5pAYkS
         DVHRBKJETcAkggnB/EwQRAMBlZ8kEjTqjwSJb0ShoZvw3vM1atZxHutY57nWua77uu6qu6qysfHHvu3X
         +grHtt/n/bu+d+ePns95//m/XeDfBP+bOx8IJv96ygcb/2onf+z8Xxb/S3PP6+YPmV83V87o79b3d8sb
         3/Q9xYXif1H8L5L/+Pl3mgsTv1b8WvOfKC4Ev1r8avOH6TO4UN7fLs7ce/47zXP+ufEng8k/C3b+VPM/

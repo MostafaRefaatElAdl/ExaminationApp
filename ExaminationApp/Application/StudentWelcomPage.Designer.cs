@@ -199,11 +199,7 @@
             this.Controls.Add(this.panelSliderMenue);
             this.Name = "StudentWelcomPage";
             this.Text = "StudentWelcomPage";
-<<<<<<< HEAD:ExaminationApp/StudentWelcomPage.Designer.cs
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentWelcomPage_FormClosing);
-=======
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StudentWelcomPage_FormClosed);
->>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049:ExaminationApp/Application/StudentWelcomPage.Designer.cs
             this.Load += new System.EventHandler(this.StudentWelcomPage_Load);
             this.panelSliderMenue.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
