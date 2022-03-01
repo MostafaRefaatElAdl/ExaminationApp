@@ -50,46 +50,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Courses.cs" />
-    <Compile Include="ExamPage.cs">
+    <Compile Include="Classes\Courses.cs" />
+    <Compile Include="Application\ExamPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExamPage.Designer.cs">
+    <Compile Include="Application\ExamPage.Designer.cs">
       <DependentUpon>ExamPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPage.cs">
+    <Compile Include="Application\LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPage.Designer.cs">
+    <Compile Include="Application\LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="Instructor.cs" />
+    <Compile Include="Database\DataAccess.cs" />
+    <Compile Include="Database\Helper.cs" />
+    <Compile Include="Classes\Instructor.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Questions.cs" />
-    <Compile Include="Q_Choices.cs" />
-    <Compile Include="Student.cs" />
+    <Compile Include="Classes\Questions.cs" />
+    <Compile Include="Classes\Q_Choices.cs" />
+    <Compile Include="Classes\Student.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentCourses.cs" />
-    <Compile Include="StudentGrades.cs" />
-    <Compile Include="StudentWelcomPage.cs">
+    <Compile Include="Classes\St_Crs.cs" />
+    <Compile Include="Classes\StudentGrades.cs" />
+    <Compile Include="Application\StudentWelcomPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentWelcomPage.Designer.cs">
+    <Compile Include="Application\StudentWelcomPage.Designer.cs">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Exam.cs" />
     <Compile Include="St_Answer.cs" />
     <EmbeddedResource Include="ExamPage.resx">
+=======
+    <Compile Include="Classes\Exam.cs" />
+    <Compile Include="Classes\St_Answer.cs" />
+    <Compile Include="WelcomeInsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WelcomeInsPage.Designer.cs">
+      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Application\ExamPage.resx">
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049
       <DependentUpon>ExamPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPage.resx">
+    <EmbeddedResource Include="Application\LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -97,9 +109,15 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudentWelcomPage.resx">
+    <EmbeddedResource Include="Application\StudentWelcomPage.resx">
       <DependentUpon>StudentWelcomPage.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
+    <EmbeddedResource Include="WelcomeInsPage.resx">
+      <DependentUpon>WelcomeInsPage.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 367f9845335f8c3ec4ddc10bcdc03a48058c6049
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -20,31 +20,31 @@ namespace ExaminationApp
         int c_id;
         DataAccess da;
         static string st_answer;
-
+        
         public ExamPage(int id)
         {
             c_id = id;     
             InitializeComponent();
 
         }
-
+        
         private void ExamPage_Load(object sender, EventArgs e)
         {
+            
             ShowQuetions();
             if (listExams.Count == 0)
             {
                 MessageBox.Show("not Available");
                 this.Close();
             }
-            else 
+            else
             {
-                da.InsertStudentExam(30,new DateTime(2022,5,13), c_id);
                 AskQuetions(QuestionNumber);
-            }
-
         }
+
+    }
         // ======================================global list to carry Answers===========================
- 
+        
         Dictionary<string, string[]> exam = new Dictionary<string, string[]>();
      
         public void ShowQuetions()
@@ -58,7 +58,7 @@ namespace ExaminationApp
             {
                 exam.Add(listExams[i].Q_desc, listExams[i].SplitChoices());
             }
-
+            
 
         }
        
@@ -119,7 +119,9 @@ namespace ExaminationApp
                 QuestionNumber++;
                 if (QuestionNumber < totalQuestions)
                 {
+
                     AskQuetions(QuestionNumber);         
+
                     ClearRadio();
                 }
                 else
@@ -130,7 +132,11 @@ namespace ExaminationApp
                     Choice3.Hide();
                     Choice4.Hide();
                     next.Hide();
-                    //insert grade 
+
+
+                    da.GetExamGrade(LoginPage.student_id,c_id);
+                    btnFinish.Show();
+
 
                 }
             }
@@ -152,5 +158,14 @@ namespace ExaminationApp
             st_answer = null;
         }
 
+        private void ExamPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

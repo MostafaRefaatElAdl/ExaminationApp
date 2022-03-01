@@ -34,14 +34,15 @@
             this.Choice3 = new System.Windows.Forms.RadioButton();
             this.Choice4 = new System.Windows.Forms.RadioButton();
             this.next = new System.Windows.Forms.Button();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbQ
             // 
             this.lbQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQ.Location = new System.Drawing.Point(37, 31);
+            this.lbQ.Location = new System.Drawing.Point(37, 26);
             this.lbQ.Name = "lbQ";
-            this.lbQ.Size = new System.Drawing.Size(599, 39);
+            this.lbQ.Size = new System.Drawing.Size(705, 39);
             this.lbQ.TabIndex = 0;
             this.lbQ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -56,7 +57,6 @@
             this.Choice1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Choice1.UseVisualStyleBackColor = true;
             this.Choice1.Click += new System.EventHandler(this.CheckAnswerEvent);
-            //this.Choice1.Paint += new System.Windows.Forms.PaintEventHandler(this.Choice1_Paint);
             // 
             // Choice2
             // 
@@ -105,11 +105,25 @@
             this.next.UseVisualStyleBackColor = true;
             this.next.Click += new System.EventHandler(this.next_Click);
             // 
+            // btnFinish
+            // 
+            this.btnFinish.BackColor = System.Drawing.Color.LawnGreen;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinish.Location = new System.Drawing.Point(303, 147);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(139, 54);
+            this.btnFinish.TabIndex = 6;
+            this.btnFinish.Text = "Finish";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Visible = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // ExamPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 274);
+            this.Controls.Add(this.btnFinish);
             this.Controls.Add(this.next);
             this.Controls.Add(this.Choice4);
             this.Controls.Add(this.Choice3);
@@ -118,6 +132,7 @@
             this.Controls.Add(this.lbQ);
             this.Name = "ExamPage";
             this.Text = "ExamPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ExamPage_FormClosed);
             this.Load += new System.EventHandler(this.ExamPage_Load);
             this.ResumeLayout(false);
 
@@ -131,5 +146,6 @@
         private System.Windows.Forms.RadioButton Choice3;
         private System.Windows.Forms.RadioButton Choice4;
         private System.Windows.Forms.Button next;
+        private System.Windows.Forms.Button btnFinish;
     }
 }
