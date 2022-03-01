@@ -71,6 +71,7 @@ namespace ExaminationApp
         {
             if (choices.Length == 5)
             {
+                this.Text = "Please, Choose the right answer (multiple-choice question)";
                 Choice1.Text = choices[0];
                 Choice2.Text = choices[1];
                 Choice3.Text = choices[2];
@@ -80,11 +81,11 @@ namespace ExaminationApp
             }
             else if (choices.Length == 3)
             {
+                this.Text = "Please, Choose the right answer (True & False)";
                 Choice1.Text = choices[0];
                 Choice2.Text = choices[1];
                 Choice3.Hide();
                 Choice4.Hide();
-
             }
             else
             {
@@ -100,53 +101,6 @@ namespace ExaminationApp
         {
             lbQ.Text = exam.Keys.ElementAt(Qnum);
             DisplayChoices(exam.Values.ElementAt(Qnum));
-            #region
-            /*  switch (Qnum)
-              {
-                  case 1:
-                      lbQ.Text = exam.Keys.ElementAt(0);
-                      DisplayChoices(exam.Values.ElementAt(0));
-                      break;
-                  case 2:
-                      lbQ.Text = exam.Keys.ElementAt(1);
-                      DisplayChoices(exam.Values.ElementAt(1));
-                      break;
-                  case 3:
-                      lbQ.Text = exam.Keys.ElementAt(2);
-                      DisplayChoices(exam.Values.ElementAt(2));
-                      break;
-
-                  case 4:
-                      lbQ.Text = exam.Keys.ElementAt(3);
-                      DisplayChoices(exam.Values.ElementAt(3));
-                      break;
-                  case 5:
-                      lbQ.Text = exam.Keys.ElementAt(4);
-                      DisplayChoices(exam.Values.ElementAt(4));
-                      break;
-                  case 6:
-                      lbQ.Text = exam.Keys.ElementAt(5);
-                      DisplayChoices(exam.Values.ElementAt(5));
-                      break;
-                  case 7:
-                      lbQ.Text = exam.Keys.ElementAt(6);
-                      DisplayChoices(exam.Values.ElementAt(6));
-                      break;
-                  case 8:
-                      lbQ.Text = exam.Keys.ElementAt(7);
-                      DisplayChoices(exam.Values.ElementAt(7));
-                      break;
-
-                  case 9:
-                      lbQ.Text = exam.Keys.ElementAt(8);
-                      DisplayChoices(exam.Values.ElementAt(8));
-                      break;
-                  case 10:
-                      lbQ.Text = exam.Keys.ElementAt(9);
-                      DisplayChoices(exam.Values.ElementAt(9));
-                      break;
-              }*/
-            #endregion
         }
 
         // this function to know which choice Student select it
