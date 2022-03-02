@@ -1,7 +1,7 @@
 # ExaminationApp
  ## SQL database and an automated system that can perform exams.  
 
-Technologies used : SQL Server, C#, Dapper  
+Technologies used : SQL Server, C#, Dapper,Report Builder  
 
 ## Instruction:   
 1- Download the project  
